@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>WillFromAfar Generator</title>
+	<title>TTS Example</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<style>
 		body {
@@ -116,10 +116,10 @@
 </head>
 <body>
 	<div class="container">
-		<h1>WillFromAfar Generator</h1>
-		<p>Generate the funny WillFromAfar voice (and more) in your browser. (Powered by Acapela Magic)</p>
+		<h1>TTS Example</h1>
+		<p>credit goes to thetoonsofjosh for the page</p>
 
-		<h2>Acapela Group text-to-speech voices from your browser</h2>
+		<h2>TTS Example From Your Browser</h2>
 		<form id="quickspeakForm">
 			<div class="search-container">
 				<input type="text" id="voiceSearch" placeholder="Search for a voice..." aria-label="Search for a voice">
@@ -170,7 +170,7 @@
 				return;
 			}
 			$.ajax({
-				url: `https://www.acapela-cloud.com/api/command/?voice=${encodeURIComponent(selectedVoice)}&text=${encodeURIComponent(inputText)}&output=stream&type=mp3&samplerate=22050&token=bd8b22e3e5ebbaa05ea0055aec4e16c357c29486`,
+				url: `http://speech.seediffusion.cc:7774/synthesize?voice=${encodeURIComponent(selectedVoice)}&text=${encodeURIComponent(inputText)}`,
 				method: 'GET',
 				success: function (data, status, xhr) {
 					if (xhr.status === 200) {
