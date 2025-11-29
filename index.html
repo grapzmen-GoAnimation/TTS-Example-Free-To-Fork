@@ -170,7 +170,7 @@
 				return;
 			}
 			$.ajax({
-				url: `http://speech.seediffusion.cc:7774/synthesize?voice=${encodeURIComponent(selectedVoice)}&text=${encodeURIComponent(inputText)}`,
+				url: `https://speech.seediffusion.cc:7774/synthesize?voice=${encodeURIComponent(selectedVoice)}&text=${encodeURIComponent(inputText)}`,
 				method: 'GET',
 				success: function (data, status, xhr) {
 					if (xhr.status === 200) {
